@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South American Deforestation Tracker (2000-2025)</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-title-area">
+      <h1>South American Deforestation Visualizer</h1>
+      <p>Binary Forest Coverage & Relational Clearance Rate Tracker (2000 – 2025)</p>
+    </div>
+    
+    <div class="header-controls">
+      <!-- Country Dropdown -->
+      <select id="country-select" class="styled-select">
+        <option value="South America">South America (Continental)</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Bolivia">Bolivia</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Paraguay">Paraguay</option>
+        <option value="Peru">Peru</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Layout -->
+  <div class="main-dashboard">
+    
+    <!-- Left Pane: Map and Slider -->
+    <div class="map-viewport">
+      <div class="map-main-container">
+        <!-- Leaflet Map Container -->
+        <div id="map-container" class="map-pane"></div>
+
+        <!-- Simple Map Legend -->
+        <div class="map-legend">
+          <div class="legend-title">Forest Cover Legend</div>
+          <div class="legend-row">
+            <div class="legend-color" style="background: #10b981;"></div>
+            <span>Intact Forest</span>
+          </div>
+          <div class="legend-row">
+            <div class="legend-color" style="background: #ef4444;"></div>
+            <span>Deforested / Cleared</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline Scrub Bar -->
+      <footer id="timeline-controls" class="timeline-bar">
+        <button id="play-pause-btn" class="play-btn">
+          <i data-lucide="play"></i>
+        </button>
+        <div class="timeline-slider-wrapper">
+          <div class="timeline-ticks">
+            <span class="tick active" data-year="2000">2000</span>
+            <span class="tick" data-year="2005">2005</span>
+            <span class="tick" data-year="2010">2010</span>
+            <span class="tick" data-year="2015">2015</span>
+            <span class="tick" data-year="2020">2020</span>
+            <span class="tick" data-year="2025">2025</span>
+          </div>
+          <input type="range" id="time-slider" class="timeline-slider" 
+                 min="2000" max="2025" step="1" value="2000" />
+        </div>
+      </footer>
+    </div>
+
+    <!-- Right Pane: Analysis & Charts -->
+    <aside class="analysis-viewport">
+      <!-- Country Profile Card -->
+      <section class="info-panel">
+        <h3 class="panel-title">
+          <i data-lucide="globe"></i>
+          <span id="country-title">South America</span>
+        </h3>
+        <p id="country-desc" class="panel-body">
+          Continental overview of South American forest biomes.
+        </p>
+      </section>
+
+      <!-- Relational Data Science Chart -->
+      <section class="info-panel chart-panel">
+        <h3 class="panel-title">
+          <i data-lucide="trending-up"></i> Deforestation Rate vs. Forest Coverage
+        </h3>
+        <p class="chart-subtitle">
+          Comparing cumulative forest cover (green line) against year-by-year clearance activity (red line/area).
+        </p>
+        <div class="chart-container">
+          <canvas id="relational-chart"></canvas>
+        </div>
+      </section>
+    </aside>
+
+  </div>
+
+  <!-- JS Dependencies -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- App JS Modules -->
+  <script src="data.js"></script>
+  <script src="charts.js"></script>
+  <script src="map.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
