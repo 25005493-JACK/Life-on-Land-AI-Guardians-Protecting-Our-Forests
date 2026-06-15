@@ -2,10 +2,6 @@ REFERENCES
 
 Food and Agriculture Organization of the United Nations. (2025). Global forest resources assessment 2025: Main report. FAO. https://doi.org/10.4060/fra2025
 
-Finer, M., & Mamani, N. (2025). Amazon deforestation trends: 2020-2025 updates. Monitoring of the Andean Amazon Project (MAAP). https://maaproject.org/
-
 Global Forest Watch. (2025). Interactive world forest watch dashboard: Tree cover loss in South America (2000-2024). World Resources Institute. Retrieved June 15, 2026, from https://www.globalforestwatch.org/
 
 Hansen, M. C., Potapov, P. V., Moore, R., Hancher, M., Turubanova, S. A., Tyukavina, A., Thau, D., Stehman, S. V., Goetz, S. J., Loveland, T. R., Kommareddy, A., Egorov, A., Chini, L., Justice, C. O., & Townshend, J. R. G. (2013). High-resolution global maps of 21st-century forest cover change. Science, 342(6160), 850–853. https://doi.org/10.1126/science.1244693
-
-Ritchie, H., Rosado, P., & Roser, M. (2021). Forests and deforestation. Our World in Data. https://ourworldindata.org/forests-and-deforestation
